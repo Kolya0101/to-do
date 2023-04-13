@@ -24,7 +24,7 @@ function UpdateTodo({isAuthenticated, setIsAuthenticated, match}) {
     e.preventDefault();
   
     try {
-      await axios.put(`http://100.26.222.152:3001/api/todo/${match.params.id}`, {title, targetDate}, {
+      await axios.put(`http://107.22.147.17:3001/api/todo/${match.params.id}`, {title, targetDate}, {
         headers: {
           'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         }
@@ -49,7 +49,7 @@ function UpdateTodo({isAuthenticated, setIsAuthenticated, match}) {
     const loadData = async () => {
       let response = null;
       try {
-        response = await axios.get(`http://100.26.222.152:3001/api/todo/${match.params.id}`, {
+        response = await axios.get(`http://107.22.147.17:3001/api/todo/${match.params.id}`, {
           headers: {
 						'Authorization': `Bearer ${sessionStorage.getItem('token')}`
 					}
